@@ -1,0 +1,13 @@
+.moduleWrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header {
+	align-self: flex-start;
+}
+
+.module {
+	display: flex;
+	flex-direction: column;
+}

@@ -3,13 +3,13 @@ export type Moduls = {
 	id: string;
 };
 
-export interface IModals {
-	[index: number]: Moduls;
-}
-
 export type Data = {
 	title: string;
-	specializedSubjects: IModals;
-	baseSubjects: IModals;
+	specializedSubjects: Moduls[];
+	baseSubjects: Moduls[];
 	id: string;
 };
+
+export interface IData {
+	[index: number]: Data;
+}
