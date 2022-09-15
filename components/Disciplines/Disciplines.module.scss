@@ -15,13 +15,19 @@
 	line-height: 120%;
 }
 
-.discipline {
+.disciplines {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 120%;
+	max-width: 353px;
 }
 
 .stick {
 	width: 97%;
 	border: 1px solid #ff3535;
+}
+
+.disciplinesWrap {
+	align-self: flex-end;
+	margin: 0 0 1%;
 }

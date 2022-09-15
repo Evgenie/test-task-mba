@@ -16,11 +16,11 @@ const Disciplines: React.FC<Props> = ({ data }) => {
 					<div key={id}>
 						<h2 className={styles.title}>{title}</h2>
 						<div className={styles.moduleWrap}>
-							<h3 >
+							<div>
 								<div className={styles.stick} />
-								<p className={styles.moduleName}>1 модуль</p>
-							</h3 >
-							<ul>
+								<h3 className={styles.moduleName}>1 модуль</h3>
+							</div>
+							<ul className={styles.disciplinesWrap}>
 								{module1.map(({ string, id }) => (
 									<li key={id} className={styles.disciplines}>
 										{string}
@@ -31,7 +31,7 @@ const Disciplines: React.FC<Props> = ({ data }) => {
 								<div className={styles.stick} />
 								<h3 className={styles.moduleName}>2 модуль</h3>
 							</div>
-							<ul>
+							<ul className={styles.disciplinesWrap}>
 								{module2.map(({ string, id }) => (
 									<li key={id} className={styles.disciplines}>
 										{string}
