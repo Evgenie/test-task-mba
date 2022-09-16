@@ -1,12 +1,25 @@
-.moduleWrap {
-	display: flex;
-	flex-wrap: wrap;
+.programWrap {
+	width: 100%;
 }
 
 .title {
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 120%;
+	margin-bottom: 90px;
+}
+
+.modules {
+	display: flex;
+	justify-content: space-between;
+	align-content: flex-start;
+	width: 100%;
+}
+
+.moduleWrap {
+	display: flex;
+	flex-grow: 1;
+	width: 100%;
 }
 
 .moduleName {
@@ -15,19 +28,37 @@
 	line-height: 120%;
 }
 
+.disciplinesWrap {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	padding-left: 5;
+}
+
 .disciplines {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 120%;
 	max-width: 353px;
+	padding-left: 10px;
+}
+
+.disciplines::marker {
+	font-size: 95%;
+	color: #ff3535;
+}
+
+.sticks {
+	display: flex;
+}
+
+.stickWrap {
+	position: relative;
 }
 
 .stick {
 	width: 97%;
 	border: 1px solid #ff3535;
-}
-
-.disciplinesWrap {
-	align-self: flex-end;
-	margin: 0 0 1%;
+	position: absolute;
+	top: -30px;
 }
