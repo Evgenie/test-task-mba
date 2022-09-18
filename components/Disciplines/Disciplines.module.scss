@@ -12,53 +12,14 @@
 .modules {
 	display: flex;
 	justify-content: space-between;
-	align-content: flex-start;
-	width: 100%;
 }
 
-.moduleWrap {
-	display: flex;
-	flex-grow: 1;
-	width: 100%;
-}
-
-.moduleName {
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 120%;
-}
-
-.disciplinesWrap {
-	display: flex;
-	flex-direction: column;
-	row-gap: 10px;
-	padding-left: 5;
-}
-
-.disciplines {
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 120%;
-	max-width: 353px;
-	padding-left: 10px;
-}
-
-.disciplines::marker {
-	font-size: 95%;
-	color: #ff3535;
-}
-
-.sticks {
-	display: flex;
-}
-
-.stickWrap {
-	position: relative;
-}
-
-.stick {
-	width: 97%;
-	border: 1px solid #ff3535;
-	position: absolute;
-	top: -30px;
+@media screen and (max-width: 1100px) {
+	.modules {
+		flex-direction: column;
+	}
+	.title {
+		font-weight: 500;
+		font-size: 28px;
+	}
 }

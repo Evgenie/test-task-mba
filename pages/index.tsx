@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Disciplines from '../components/Disciplines';
+import Discriptions from '../components/Discriptions';
 import styles from '../styles/Home.module.scss';
 import { Data } from '../types';
 import { get5LearningProgram } from '../utils/getLearningProgram';
@@ -27,6 +28,7 @@ const Home: NextPage<Props> = ({ data }) => {
 		<div className={styles.container}>
 			<h1 className={styles.header}>Специализированные дисциплины</h1>
 			<Disciplines data={data} />
+			<Discriptions />
 		</div>
 	);
 };

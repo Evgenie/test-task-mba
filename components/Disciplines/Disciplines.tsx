@@ -1,5 +1,6 @@
 import React from 'react';
 import { Data } from '../../types';
+import Module from '../Module';
 import styles from './Disciplines.module.scss';
 
 interface Props {
@@ -14,28 +15,14 @@ export const Disciplines: React.FC<Props> = ({ data }) => {
 					<div key={id} className={styles.programWrap}>
 						<h2 className={styles.title}>{title}</h2>
 						<div className={styles.modules}>
-							<div className={styles.stickWrap}>
-								<div className={styles.stick} />
-								<h3 className={styles.moduleName}>1 модуль</h3>
-							</div>
-							<ul className={styles.disciplinesWrap}>
-								{specializedSubjects.map(({ string, id }) => (
-									<li key={id} className={styles.disciplines}>
-										{string}
-									</li>
-								))}
-							</ul>
-							<div className={styles.stickWrap}>
-								<div className={styles.stick} />
-								<h3 className={styles.moduleName}>2 модуль</h3>
-							</div>
-							<ul className={styles.disciplinesWrap}>
-								{specializedSubjects.map(({ string, id }) => (
-									<li key={id} className={styles.disciplines}>
-										{string}
-									</li>
-								))}
-							</ul>
+							<Module
+								specializedSubjects={specializedSubjects}
+								moduleName={'1 модуль'}
+							/>
+							<Module
+								specializedSubjects={specializedSubjects}
+								moduleName={'2 модуль'}
+							/>
 						</div>
 					</div>
 				);

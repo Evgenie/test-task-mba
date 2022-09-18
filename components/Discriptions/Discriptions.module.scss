@@ -1,0 +1,98 @@
+.discriptionsWrap {
+	display: flex;
+	column-gap: 30px;
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+@mixin discription {
+	max-height: 293px;
+	min-height: 342px;
+	max-width: 628px;
+	min-width: 345px;
+	color: #fff;
+	padding: 4%;
+}
+
+.discription1 {
+	@include discription;
+	background-color: #ff3535;
+	position: relative;
+	overflow: hidden;
+}
+
+.discription2 {
+	@include discription;
+	background-color: #2d2c2a;
+}
+
+.discriptionTitle {
+	font-family: 'Styrene A Web';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 120%;
+	margin-bottom: 25px;
+}
+
+.textWrap {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	padding-left: 20px;
+}
+
+.discriptionText {
+	font-family: 'Styrene A Web';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 130%;
+}
+
+.discriptionText::marker {
+	font-size: 90%;
+	color: #ff3535;
+}
+
+@mixin corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.redCorner {
+	@include corner;
+	width: 43px;
+	height: 43px;
+	background-color: #cd1800;
+}
+
+.whiteCorner {
+	@include corner;
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	transform: rotate(45deg) translateY(-84%);
+}
+
+@media screen and (max-width: 1100px) {
+	.discriptionsWrap {
+		flex-direction: column;
+		row-gap: 23px;
+		margin: 0;
+	}
+	.discriptionTitle {
+		font-size: 25px;
+	}
+    .redCorner{
+        width: 26px;
+        height: 26px;
+    }
+    .whiteCorner{
+        transform: rotate(45deg) translateY(-98%);
+    }
+    @mixin discription {
+        padding: 10%;
+    }
+}
