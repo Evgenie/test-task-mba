@@ -1,0 +1,25 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 90px;
+	max-width: 1286px;
+	margin: 70px auto 70px;
+}
+
+.header {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 120%;
+}
+
+@media screen and (max-width: 1286px) {
+	.container {
+		margin: 30px 15px 30px;
+		row-gap: 35px;
+	}
+	.header {
+		font-weight: 500;
+		font-size: 28px;
+	}
+}
