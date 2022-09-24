@@ -29,6 +29,7 @@
 	font-weight: 400;
 	font-size: 32px;
 	line-height: 120%;
+	vertical-align: middle;
 }
 
 .stick {
@@ -46,32 +47,55 @@
 	.moduleWrap .moduleContent {
 		display: none;
 	}
-	.moduleWrap {
-		width: 100%;
-	}
-	.tabTitle {
-		display: flex;
-		height: 51px;
-		width: 100%;
-		background: #f7f7f7;
-	}
 	.stick {
 		display: none;
 	}
-	.moduleWrap :checked .moduleContent {
+	.moduleWrap {
+		display: block;
+		width: 100%;
+	}
+	.disciplinesWrap {
+		padding-left: 18px;
+	}
+	.disciplines {
+		padding-left: 3px;
+	}
+	.moduleName {
+		font-weight: 300;
+		font-size: 18px;
+		margin-left: 26px;
+	}
+	.tabTitle {
 		display: flex;
+		align-items: center;
+		height: 51px;
+		width: 100%;
+		cursor: pointer;
+		background: #f7f7f7;
+	}
+	.tabTitle::before {
+		content: '+';
+		color: #d9d9d9;
+		font-size: 42px;
+		font-weight: lighter;
+		margin-left: 25px;
+		margin-bottom: 8px;
 	}
 	.moduleWrap :checked + .tabTitle {
 		background-color: #ff3535;
 		color: #fff;
 	}
 
-	.tabTitle::before {
-		content: '+';
-		color: #D9D9D9;
-		font-size: 36px;
-	}
 	.moduleWrap :checked + .tabTitle::before {
 		content: '-';
+		color: #fff;
+		font-size: 50px;
+		font-weight: lighter;
+		margin-left: 25px;
+		margin-bottom: 8px;
+	}
+	.moduleWrap :checked ~ .moduleContent {
+		display: flex;
+		justify-content: flex-start;
 	}
 }

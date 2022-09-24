@@ -5,22 +5,24 @@ import { Moduls } from '../../types';
 interface Props {
 	specializedSubjects: Moduls[];
 	moduleName: string;
+	id: string;
 }
 
 export const Module: React.FC<Props> = ({
 	specializedSubjects,
 	moduleName,
+	id,
 }) => {
 	return (
 		<>
 			<div className={styles.moduleWrap}>
 				<input
-					type="radio"
-					id="tab1"
+					type="checkbox"
+					id={`${moduleName}_${id}`}
 					name="tab-group"
 					className={styles.input}
 				/>
-				<label htmlFor="tab1" className={styles.tabTitle}>
+				<label htmlFor={`${moduleName}_${id}`} className={styles.tabTitle}>
 					<div className={styles.stick} />
 					<h3 className={styles.moduleName}>{moduleName}</h3>
 				</label>

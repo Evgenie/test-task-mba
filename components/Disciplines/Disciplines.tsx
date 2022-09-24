@@ -18,10 +18,12 @@ export const Disciplines: React.FC<Props> = ({ data }) => {
 							<Module
 								specializedSubjects={specializedSubjects}
 								moduleName={'1 модуль'}
+								id={id}
 							/>
 							<Module
 								specializedSubjects={specializedSubjects}
 								moduleName={'2 модуль'}
+								id={id}
 							/>
 						</div>
 					</div>
