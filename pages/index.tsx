@@ -3,7 +3,7 @@ import Disciplines from '../components/Disciplines';
 import Discriptions from '../components/Discriptions';
 import styles from '../styles/Home.module.scss';
 import { Data } from '../types';
-import { get5LearningProgram } from '../utils/getLearningProgram';
+import { get5LearningProgram } from '../utils/get5LearningProgram';
 
 interface Props {
 	data: Data[];
